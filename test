@@ -6,12 +6,15 @@ require 'pp'
 
 def run patterns, input
   grok = Grok.new
-  patterns.each { |p| grok.add_patterns_from_file p }
+  patterns.each do |p|
+    $stdout.puts "Reading pattern file: '#{p}'"
+    grok.add_patterns_from_file p
+  end
 
   grok.compile input
   puts "PATTERN: #{input}"
 
-  while a = $stdin.gets.chomp
+  while a = $stdin.gets
     puts "IN: #{a}"
     match = grok.match a
     if match
