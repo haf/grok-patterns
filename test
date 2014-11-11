@@ -1,0 +1,33 @@
+#!/usr/bin/env ruby
+
+require 'rubygems'
+require 'grok-pure'
+require 'pp'
+
+def run patterns, input
+  grok = Grok.new
+  patterns.each { |p| grok.add_patterns_from_file p }
+
+  grok.compile input
+  puts "PATTERN: #{input}"
+
+  while a = $stdin.gets.chomp
+    puts "IN: #{a}"
+    match = grok.match a
+    if match
+      $stdout.puts "MATCH:"
+      pp match.captures
+    else
+      $stderr.puts "No Match."
+    end
+  end
+end
+
+raise 'missing file path' unless ARGV[0]
+
+patterns = Dir.glob 'patterns/*'
+data = File.open(ARGV[0], 'rb') do |io|
+  io.read
+end
+
+run patterns, data

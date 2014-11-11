@@ -1,8 +1,10 @@
 #!/usr/bin/env bash
 
+[ -f patterns/grok-patterns ] || \
+  curl -o patterns/grok-patterns -L https://raw.githubusercontent.com/logstash/logstash/master/patterns/grok-patterns
+
 cd vagrant-elk-box
 mkdir -p projects/logs
-
 vagrant up
 vagrant ssh
 
