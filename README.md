@@ -2,7 +2,8 @@ How to test
 
 ```
 git clone git://github.com/haf/grok-patterns.git
-cd grok-patterns.git
+cd grok-patterns
+git submodule update --init
 ./run
 ```
 
