@@ -19,3 +19,7 @@ bin/logstash --configtest -f /etc/logstash/conf.d
 ```
 
 To add patterns, add them in `/etc/logstash/patterns`
+
+References:
+
+ - http://blog.jasonantman.com/2012/09/rvm-and-ruby-1-9-to-test-logstash-grok-patterns-on-fedoracentos/
