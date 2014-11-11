@@ -1,4 +1,4 @@
-### How to test
+## Getting Started
 
 ```
 git clone git://github.com/haf/grok-patterns.git
@@ -20,12 +20,22 @@ bin/logstash --configtest -f /etc/logstash/conf.d
 
 To add patterns, add them in `/etc/logstash/patterns`
 
-### References:
+### Testing Locally
+
+```
+./test groks/audit-EXECVE
+```
+
+## References:
 
  - http://blog.jasonantman.com/2012/09/rvm-and-ruby-1-9-to-test-logstash-grok-patterns-on-fedoracentos/
 
 
-### About the Patterns
+## About the Patterns
+
+### Audit
+
+[auditd man page](http://linux.die.net/man/8/auditctl)
 
 #### groks/auditd-EXECVE
 
