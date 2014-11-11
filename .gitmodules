@@ -1,0 +1,3 @@
+[submodule "vagrant-elk-box"]
+	path = vagrant-elk-box
+	url = https://github.com/comperiosearch/vagrant-elk-box.git
