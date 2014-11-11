@@ -1,0 +1,1 @@
+type=%{WORD:audit_type} msg=audit\(%{NUMBER:audit_epoch}:%{NUMBER:audit_counter}\): argc=%{INT:audit_argc} %{GREEDYDATA:audit_execve_rest}
