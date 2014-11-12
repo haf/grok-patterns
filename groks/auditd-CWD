@@ -1,0 +1,1 @@
+type=CWD msg=audit\(%{NUMBER:audit_epoch}:%{NUMBER:audit_counter}\):  cwd="%{PATH:audit_cwd}"
