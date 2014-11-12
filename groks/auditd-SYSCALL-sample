@@ -1,0 +1,1 @@
+type=SYSCALL msg=audit(1415701828.488:330700): arch=c000003e syscall=59 success=yes exit=0 a0=1b57240 a1=1b48e60 a2=1b20ad0 a3=7fffaa5e54d0 items=2 ppid=21926 pid=21947 auid=1001 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts5 ses=585 comm="tail" exe="/usr/bin/tail" subj=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 key="rootcmd"

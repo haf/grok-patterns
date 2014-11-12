@@ -1,0 +1,1 @@
+type=USER_LOGIN msg=audit(1415701794.200:330696): pid=21942 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:sshd_t:s0-s0:c0.c1023 msg='op=login acct=28696E76616C6964207573657229 exe="/usr/sbin/sshd" hostname=? addr=62.210.86.35 terminal=ssh res=failed'
