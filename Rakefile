@@ -59,7 +59,7 @@ task :prepare do
   filters =
     subjects.
       map { |file, data| template_grok data, ["grok_type", File.basename(file)]}.
-      join "\n"
+      join("\n")
 
   File.open('vagrant-elk-box/confs/logstash/logstash.conf', 'w+') do |io|
     io.write %{
