@@ -50,7 +50,7 @@ end
 task :prepare do
   subjects =
     Dir.glob('groks/*').
-    reject { |f| f.end_with? '-sample' }.
+    reject { |f| !!(f =~ /-sample.*/) }. # proof ruby isomorphic to perl
     map { |file| [file, File.open(file, 'rb') { |io| io.read } ]  }
 
   filters =
