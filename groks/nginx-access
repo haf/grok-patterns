@@ -1,0 +1,1 @@
+%{IPORHOST:host} - %{WORD:remote_user} \[%{MONTHDAY}/%{MONTH}/%{YEAR}:%{TIME} %{ISO8601_TIMEZONE}\] %{QS:request} %{INT:status} %{INT:bytes_sent} %{QS:http_referer} %{QS:http_user_agent}
