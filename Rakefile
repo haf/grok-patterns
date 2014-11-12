@@ -29,7 +29,7 @@ task :specs do
         io.read
       end
 
-      $stdout.puts "running test on grok filter: #{subject}"
+      $stdout.puts "running test on grok filter: #{subject} with sample #{sample_file}"
       run patterns, grok_filter, grok_filter_input
     end
   end
